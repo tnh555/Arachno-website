@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arachno</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        header {
+            background: rgb(19, 32, 36);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2em;
+        }
+
+        header h1 {
+            margin: 0 20px;
+            color: whitesmoke;
+            min-width: fit-content;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            width: fit-content;
+            margin-left: 1em;
+
+        }
+
+        nav li {
+            list-style: none;
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.2em;
+            min-width: fit-content;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .arachno-header {
+            background: url("images/pc.jpg") fixed no-repeat center/cover;
+            height: 30em;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-text {
+            position: relative;
+            text-align: center;
+            color: white;
+            background: #24242462;
+            height: 100%;
+            width: 100%;
+            font-size: 30px;
+
+        }
+
+        .header-text h1 {
+            text-shadow: #242424 0 0 5px;
+            font-size: 70px;
+            margin-top: 10%;
+        }
+
+        .header-text p {
+            text-shadow: #242424 0 0 5px;
+
+        }
+
+        .services {
+            padding-bottom: 5em;
+            background: rgb(37, 37, 37);
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 4em;
+            color: #ffffff;
+            padding: 1em 0;
+
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 25em;
+            min-height: 22em;
+            box-shadow: 0 3px 10px 1px #24242460;
+            padding: 2em;
+            padding-bottom: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            color: rgb(97, 97, 97);
+            animation: box 3s ease-out;
+            background: white;
+        }
+
+        .box:nth-of-type(1) {animation-delay: 0s;}
+        .box:nth-of-type(2) {animation-delay: .5s;}
+        .box:nth-of-type(3) {animation-delay: 1s;}
+
+        @keyframes box {
+                from {
+                    opacity: 0;
+                    transform: translate3d(0, -20%, 0);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+
+            }
+
+        .box h3 {
+            color: rgb(0, 0, 100);
+            margin: 1em 0;
+            font-size: 1.7em;
+        }
+
+        .box a {
+            width: 6em;
+            margin: 1em;
+            padding: .5em;
+            transition: .5s;
+            color: rgb(0, 0, 100);
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            border: .1em solid;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box a:hover {
+            width: 7em;
+        }
+
+        .box img {
+            margin: 2em 0 1em;
+            width: 5em;
+            height: 5em;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: row-reverse;
+            min-height: 50em;
+            background-color: rgb(255, 255, 255);
+        }
+
+
+        .content-container .img {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 35%;
+        }
+
+        .content-container .content {
+            padding: 2rem 4rem;
+            width: 65%;
+            color: rgb(141, 141, 141);
+            font-size: 1.5em;
+            line-height: 2em;
+            border-radius: 10px;
+            margin-top: 8%;
+        }
+
+
+        .content h3 {
+            margin-bottom: 1em;
+            font-size: 1.8em;
+            color: rgb(0, 0, 100)
+        }
+
+        #kontakt-oss {
+            background: rgb(29, 28, 28);
+            padding: 2em;
+        }
+
+        #kontakt-oss h2 {
+            color: white;
+            margin: 0 10% 1em;
+            font-size: 2em;
+        }
+
+        #kontakt-oss form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #kontakt-oss input {
+            background: rgb(253, 253, 253);
+            width: 70%;
+            height: em;
+            margin: 1em 10%;
+            padding: 1em;
+            border: none;
+            border-radius: 3px;
+            color: #202020a1;
+        }
+
+        #message {
+            height: 4em;
+        }
+
+        #kontakt-oss input:focus {
+            color: #242424
+        }
+
+        #kontakt-oss #submit {
+            width: 10em;
+            height: 2.5em;
+            padding: 0;
+            border: rgba(255, 255, 255, 0.151) solid .1em;
+            transition: .1s;
+            color: white;
+            background: rgb(37, 37, 37);
+        }
+
+        #kontakt-oss #submit:hover {
+            cursor: pointer;
+            border: white solid .1em;
+        }
+
+        footer {
+            background: rgb(19, 32, 36);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            color: whitesmoke;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav header  -->
+    <header>
+        <a href="#hjem">
+            <h1>Arachno Web Design</h1>
+        </a>
+        <nav>
+            <ul>
+                <li id="Home"><a href="#hjem">Hjem</a></li>
+                <li id="About-us"><a href="">Om oss</a></li>
+                <li id="Contact-us"><a href="#kontakt-oss">Kontakt oss</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Parallax header -->
+    <div class="arachno-header">
+        <div class="header-text">
+            <h1>Arachno Web Design</h1>
+            <p>Web-design og Markedsføring. </p>
+        </div>
+    </div>
+
+    <!-- Hva vi tilbyr -->
+    <div class="services">
+        <h2>Hva vi tilbyr</h2>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/web-icon.png" alt="web-icon">
+                <h3>Web Design</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente praesentium, nemo adipisci
+                    molestiae
+                    atque neque, laborum cupiditate exercitationem ea dolore provident eaque distinctio dicta voluptatem
+                    laudantium unde dignissimos. Delectus, ea!</p>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
+                    <div id="read-more">Les Mer</div>
+                    <div id="icon">&rarr;</div>
+                </a>
+            </div>
+            <div class="box">
+                <img src="images/marketing-icon.png" alt="marketing-iocn">
+                <h3>Markedsføring</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente praesentium, nemo adipisci
+                    molestiae
+                    atque neque, laborum cupiditate exercitationem ea dolore provident eaque distinctio dicta voluptatem
+                    laudantium unde dignissimos. Delectus, ea!</p>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
+                    <div id="read-more">Les Mer</div>
+                    <div id="icon">&rarr;</div>
+                </a>
+            </div>
+            <div class="box">
+                <img src="images/social-media-icon.png" alt="social-media-icon">
+                <h3>Sosiale media</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente praesentium, nemo adipisci
+                    molestiae
+                    atque neque, laborum cupiditate exercitationem ea dolore provident eaque distinctio dicta voluptatem
+                    laudantium unde dignissimos. Delectus, ea!</p>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
+                    <div id="read-more">Les Mer</div>
+                    <div id="icon">&rarr;</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--"Hvorfor du trenger en nettside"-->
+    <div class="content-container">
+        <div class="img">
+            <img src="images/building-vector.png" alt="Web and mobile screen">
+            <img src="images/construction-vector.png" alt="">
+        </div>
+        <div class="content">
+            <h3>Hvorfor trenger du en nettside?</h3>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact form -->
+    <div id="kontakt-oss">
+        <h2>Kontakt oss</h2>
+        <form action="#kontakt-oss">
+            <label for="name">
+                <input type="text" id="name" value="Navn" onfocus="(this.value=='Navn') && (this.value='')"
+                    onblur="(this.value=='') && (this.value='Navn')">
+            </label>
+            <label for="email">
+                <input type="text" id="email" value="E-post" onfocus="(this.value=='E-post') && (this.value='')"
+                    onblur="(this.value=='') && (this.value='E-post')">
+            </label>
+            <label for="message">
+                <input type="text" id="message" value="Din melding"
+                    onfocus="(this.value=='Din melding') && (this.value='')"
+                    onblur="(this.value=='') && (this.value='Din melding')">
+            </label>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+    <footer>
+        <p>Designet av Tobias Haugland</p>
+    </footer>
+</body>
+
+</html>
